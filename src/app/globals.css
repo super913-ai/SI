@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body { background: #050505; color: #f2f5ee; -webkit-font-smoothing: antialiased; }
+.glass { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(18px); }
+.grad-text { background: linear-gradient(100deg,#d9f99d,#a3e635 45%,#4ade80); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* ---------- Light theme (toggle adds .light on <html>) ---------- */
+.light { color-scheme: light; }
+.light body { background: #f3f7ec; color: #0a0a0a; }
+.light .glass { background: rgba(255,255,255,.75); border-color: rgba(10,10,10,.10); }
+.light .text-white { color: #0a0a0a; }
+.light .text-white\/40 { color: rgba(10,10,10,.45); }
+.light .text-white\/50 { color: rgba(10,10,10,.55); }
+.light .text-white\/60 { color: rgba(10,10,10,.65); }
+.light .text-white\/70 { color: rgba(10,10,10,.75); }
+.light .text-white\/80 { color: rgba(10,10,10,.85); }
+.light .placeholder\:text-white\/40::placeholder { color: rgba(10,10,10,.4); }
+.light .hover\:text-white:hover { color: #000; }
+.light .bg-white\/5, .light .bg-white\/\[\.02\], .light .bg-white\/\[0\.03\] { background: rgba(10,10,10,.04); }
+.light .bg-white\/10 { background: rgba(10,10,10,.08); }
+.light .hover\:bg-white\/5:hover, .light .hover\:bg-white\/10:hover, .light .hover\:bg-white\/\[0\.07\]:hover { background: rgba(10,10,10,.08); }
+.light .border-white\/10, .light .border-white\/20 { border-color: rgba(10,10,10,.12); }
+.light .bg-black\/30 { background: rgba(10,10,10,.04); }
+.light .bg-\[\#0a0a0a\]\/95 { background: rgba(255,255,255,.96); }
+.light .bg-\[\#050505\], .light .bg-\[\#050505\]\/90 { background: #f3f7ec; }
+.light .text-emerald-300 { color: #047857; }
+.light .text-lime-300, .light .text-lime-200 { color: #4d7c0f; }
+.light .text-rose-300 { color: #be123c; }
+.light .text-amber-300 { color: #b45309; }
+.light .grad-text { background: linear-gradient(100deg,#3f6212,#65a30d 50%,#15803d); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Text on green gradient buttons/banners is always near-black for readability (keep LAST) */
+[class*="bg-gradient"], [class*="bg-gradient"] * { color: #0a0a0a; }
